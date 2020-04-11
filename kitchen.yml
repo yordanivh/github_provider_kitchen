@@ -1,0 +1,20 @@
+---
+driver:
+  name: terraform
+  variable_files:
+    - terraform.tfvars
+
+provisioner:
+  name: terraform
+
+platforms:
+  - name: github
+
+verifier:
+  name: terraform
+  systems:
+    - name: default
+      backend: local
+
+suites:
+  - name: default
